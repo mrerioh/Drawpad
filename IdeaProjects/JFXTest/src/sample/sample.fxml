@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <VBox prefHeight="40.0" prefWidth="800.0">
+            <children>
+                <HBox prefHeight="40.0" prefWidth="800.0" spacing="10.0">
+                    <children>
+                        <ColorPicker fx:id="colorpicker" />
+                        <Button fx:id="brushtool" mnemonicParsing="false" text="Brush" />
+                  <Button fx:id="erase" mnemonicParsing="false" onAction="#toolselected" text="Erase All" />
+                  <Button mnemonicParsing="false" onAction="#popStack" text="Undo" />
+                  <TextField fx:id="saveid" promptText="filename" />
+                  <Button mnemonicParsing="false" onAction="#save" text="Save" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Canvas fx:id="canvas" height="540.0" layoutY="38.0" width="800.0" />
+    </children>
+</Pane>
